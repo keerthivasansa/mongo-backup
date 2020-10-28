@@ -12,10 +12,10 @@ What you can use this Script for
 First, clone this repository using
 `git clone https://github.com/Nectres/mongo-backup.git`
 
-After that, change the "URL_HERE" to the url of the database 
-Valid URLs start with `mongo+srv://` or `mongo://
-` 
-Actually if you don't want to clone you can just create a script file `backup.sh` with contents:
+After that, change the variable `url` to the url of the database 
+Valid URLs start with `mongo+srv://` or `mongo://` 
+
+If you don't want to clone you can just create a script file `backup.sh` with contents:
 
 ```bash
 #!/bin/bash
