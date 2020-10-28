@@ -3,6 +3,8 @@ Mongo-Backup is a bash script that can be used to take backups with the time, da
 
 ## Core
 
+What you need for this Script to work
+* Complete Mongo Community Edition installed / Atleast the Database Tools which you can get here : https://www.mongodb.com/try/download/database-tools
 What you can use this Script for
 * Creating Backups with the timestamp as the folder name
 * Restoring those backups with a script
