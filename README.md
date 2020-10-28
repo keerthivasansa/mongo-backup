@@ -10,8 +10,26 @@ What you can use this Script for
 ## How to:
 
 First, clone this repository using
-`git clone repo`
+`git clone https://github.com/Nectres/mongo-backup.git`
 
+After that, change the "URL_HERE" to the url of the database 
+Valid URLs start with `mongo+srv://` or `mongo://
+` 
+Actually if you don't want to clone you can just create a script file `backup.sh` with contents:
+
+```bash
+#!/bin/bash
+timep=$(date +”%d-%b-%Y-%H-%M-%S”)
+url='' # Input your MongoDB URL here
+mongodump --uri=$url --out=$timep/ 
+cd $timep/
+cat << EOF > restore.sh
+ mongorestore --uri=$url ./
+EOF
+chmod +x ./restore.sh
+echo
+echo "Backup complete, to restore use ./restore.sh at the directory you want to restore from!"
+```
 then `cd` to the directory and use:
 
 `chmod +x ./backup.sh`
