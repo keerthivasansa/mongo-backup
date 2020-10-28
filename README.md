@@ -19,7 +19,8 @@ If you don't want to clone you can just create a script file `backup.sh` with co
 
 ```bash
 #!/bin/bash
-timep=$(date +”%d-%b-%Y-%H-%M-%S”)  # Folder name will be in the Format : "DD-MM-YYYY-HH-MM-SS" | Example : ”28-Oct-2020-19-12-03” 
+timestamp=$(date +”%d-%b-%Y-%H-%M-%S”)  # Folder will be named in the Format : "DD-MM-YYYY-HH-MM-SS" 
+#Folder Name Example : ”28-Oct-2020-19-12-03” 
 url='' # Input your MongoDB URL here
 mongodump --uri=$url --out=$timep/ 
 cd $timep/
